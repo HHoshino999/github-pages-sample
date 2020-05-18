@@ -1,0 +1,339 @@
+
+<!-- J000.jsp：[PC] ログイン -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="../css/payadvice.css" type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+<style>.menu{
+    background-color:#666666;
+    color:#FF9900;
+    text-decoration:none;
+}
+.menu:hover{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.subtitle{
+    background-color:#669933;
+    color:#FFFFFF;
+}
+.item{
+    background-color:#999999;
+    color:#FFFFFF;
+}
+.message{
+    color:#669933;
+}
+.search{
+    background-color:#00CED1;
+    color:#FFFFFF;
+}
+.s-menu{
+    background-image:-webkit-linear-gradient(top, #6FACD5, #497BAE);
+    background-color:#5E87B0;
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.s-login{
+    background-image:-webkit-linear-gradient(top, #6FACD5, #497BAE);
+    background-color:#5E87B0;
+    color:#FFFFFF;
+    text-shadow:0 1px 0 #FFFFFF;
+}
+.s-message{
+    color:#669933;
+}
+</style>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache, no-store">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noodp">
+<TITLE>Hi-PerBTﾓﾊﾞｲﾙ給与</TITLE>
+<script language="JavaScript" src="../js/payadvice.js"></script>
+<script language="JavaScript">
+<!--
+function initpg() {
+	window.focus();
+	document.form1.HID_USER_ID.focus();
+}
+
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// ログイン処理
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+function onClickLogin() {
+	func_user_id_set();
+	document.cookie = "HPMEXAUTH=0";
+	return submitFormLogin('LOGIN', '/jsp/pc/J000.jsp');
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// 携帯画面遷移処理
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+function onClickMobileLogin() {
+	document.form1.WHO_AM_I.value = "/jsp/unknown.jsp";
+	document.form1.PAGE_MODE.value = "UNKNOWN";
+	document.form1.HPMEX_AGENT_TYPE.value = "MOBILE";
+	document.form1.method = "POST";
+	document.form1.action = "../servlet/RC";
+	document.form1.submit();
+	return;
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// 携帯画面遷移処理
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+function onClickSmartphoneLogin() {
+	document.form1.WHO_AM_I.value = "/jsp/unknown.jsp";
+	document.form1.PAGE_MODE.value = "UNKNOWN";
+	document.form1.HPMEX_AGENT_TYPE.value = "SMARTPHONE";
+	document.form1.method = "POST";
+	document.form1.action = "../servlet/RC";
+	document.form1.submit();
+	return;
+}
+
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// 表示言語切替処理
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+function changeLnguage(mode) {
+	document.form1.division.value = mode;
+	return submitForm('changeLanguage');
+}
+
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// ユーザＩＤを隠項目に退避
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+function func_user_id_set(){
+	document.getElementById("USER_ID").value = document.getElementById("HID_USER_ID").value;
+}
+//-->
+</script>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" onLoad='initpg();'>
+
+<form name="form1" method="post" action="" autocomplete=off onSubmit="return onClickLogin()">
+	<table width="100%" border="0">
+		<tr>
+			<td align="left" colspan="2"><img src="./systemimage?img=LOGOIMAGE_LOGIN"></td>
+		</tr>
+		<tr>
+			
+			
+			<td height="10" class="menu" colspan="2">
+				<table width="100%" border="0" >
+					<tr>
+			
+						<td>　&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table width="100%" border="0">
+					<tr>
+						<td bgcolor="#FFFFFF"></td>
+					</tr>
+					<tr>
+						
+						
+						<td class="subtitle">
+						
+							<table>
+								<tr>
+									
+									
+									<td class="subtitle">&nbsp;</td>
+									
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						
+						<td align="right" width="100％">
+							
+							<a href="#" onclick='changeLnguage(1)'>English</a>&nbsp;
+							
+							
+							
+								<a href="#" onclick="onClickSmartphoneLogin()"><img src="../images/smartphone.jpg" alt="スマートフォン画面" style="border:none"></a>
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="center" height="50">
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							
+							
+							<table border="0" class="subtitle">
+							
+								<tr>
+									<td width="5" height="20"></td>
+									<td width="80" height="20"></td>
+									<td width="5" height="20"></td>
+									<td width="155" height="20"></td>
+									<td width="5" height="20"></td>
+								</tr>
+								
+								<tr>
+									<td>　</td>
+									
+									
+									<td>ユーザID/User&nbsp;ID</td>
+									
+									<td>　</td>
+									<td>
+										<input type="text" id="HID_USER_ID" name="HID_USER_ID" value="" style="width: 150px; height: 20px;" OnChange="func_user_id_set()" OnBlur="func_user_id_set()">
+									</td>
+									<td>　</td>
+								</tr>
+								<tr>
+									<td>　</td>
+									<td>　</td>
+									<td>　</td>
+									<td>　</td>
+									<td>　</td>
+								</tr>
+								
+								<tr>
+									<td>　</td>
+									
+									
+									<td>パスワード</td>
+									
+									<td>　</td>
+									<td>
+										<input type="password" name="PASSWORD"  value="" style="width: 150px; height: 20px;">          <!-- B6000005 -->
+									</td>
+									<td>　</td>
+								</tr>
+								<tr>
+									<td>　</td>
+									<td>　</td>
+									<td>　</td>
+										
+										
+										<td align="right">Ver.9.1.1</td>
+										
+									<td>　</td>
+								</tr>
+								
+								<tr align="center">
+									<td colspan="5">
+										<input type="submit" value="ログイン">
+									</td>
+								</tr>
+								<tr>
+									<td height="20">　</td>
+									<td height="20">　</td>
+									<td height="20">　</td>
+									<td height="20">　</td>
+									<td height="20">　</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+					<tr><td>&nbsp;</td></tr>
+					<tr>
+						
+						<td align="center">
+							<a href="#" onClick='submitFormByLink("/jsp/pc/J000.jsp", "PASSINFO")'>パスワードを忘れたら...&nbsp;/&nbsp;Forget&nbsp;login&nbsp;password?</a>
+						</td>
+					</tr>
+					
+					<tr><td>&nbsp;</td></tr>
+					<tr>
+						<td align="center">
+							<table border="0">
+							
+							<tr>
+								<td align="center">ユーザＩＤ/パスワードは、必ず半角文字にて大文字/小文字を区別し、正しく入力してください。<br>パスワードはWindowsと連携していません。お忘れの場合は上のリンクから申請して下さい。<br><br>Note&nbsp;:&nbsp;<br>User&nbsp;ID&nbsp;and&nbsp;password&nbsp;are&nbsp;case&nbsp;sensitive.<br>This&nbsp;password&nbsp;is&nbsp;not&nbsp;same&nbsp;as&nbsp;Windows.&nbsp;Please&nbsp;apply&nbsp;from&nbsp;the&nbsp;link&nbsp;above,&nbsp;if&nbsp;you&nbsp;don't&nbsp;remember.</td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<input type="hidden" name="DISPLAY_REPORT_MODE" id="DISPLAY_REPORT_MODE" value="" />
+	<input type="hidden" name="SPECIFIC_REPORT_TYPE" id="SPECIFIC_REPORT_TYPE" value="" />
+	<input type="hidden" name="SPECIFIC_FIGURE_DATE" id="SPECIFIC_FIGURE_DATE" value="" />
+	<input type="hidden" name="USER_MAILADDRESS" id="USER_MAILADDRESS" value="" />
+	<input type="hidden" name="KARAMAIL_TIMESTAMP" id="KARAMAIL_TIMESTAMP" value="" />
+	<input type="hidden" name="WHO_AM_I" id="WHO_AM_I" value="/jsp/pc/J000.jsp" />
+	<input type="hidden" name="PAGE_MODE" id="PAGE_MODE" />
+	<input type="hidden" name="HPMEX_AGENT_TYPE" id="HPMEX_AGENT_TYPE" value=""/>
+	<input type="hidden" name="KEY" id="KEY" value="" />          
+	<input type="hidden" name="division" id="division"/>
+	<input type="hidden" name="USER_ID" id="USER_ID" value="">
+	<input type="hidden" name="displayMode" id="displayMode" value="0">
+	<input type="hidden" name="TYPE" id="TYPE" value="" />
+</form>
+<div style="position:absolute; bottom:10px; right:10px;">
+	<font color="#A9A9A9">(C)Hitachi Solutions West Japan, Ltd. 2005-2019. All rights reserved.</font>
+</div>
+</BODY>
+
+</HTML>
